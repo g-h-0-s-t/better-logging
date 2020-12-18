@@ -14,7 +14,7 @@ const constructFormattingContext = (
     innerColor ? innerColor(innerContent) : config.color.base(innerContent);
   return {
     msg: message,
-    type: STAMP(logType, typeColor),
+    type: STAMP(logType.toUpperCase(), typeColor),
     time24: STAMP(
       new Date().toLocaleString("en-US", {
         hour: "numeric",
