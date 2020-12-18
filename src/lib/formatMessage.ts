@@ -32,7 +32,7 @@ const constructFormattingContext = (
       })
     ),
     date: STAMP(
-      new Date().toLocaleString("en-UK", {
+      new Date().toLocaleString("en-GB", {
         year: "numeric",
         month: "numeric",
         day: "numeric",
