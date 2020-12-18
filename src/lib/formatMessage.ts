@@ -10,8 +10,8 @@ const constructFormattingContext = (
   message: string
 ) => {
   const typeColor = config.color.type[logType];
-  const STAMP = (innerContent: string, innerColor: Color = config.color.base) =>
-    config.color.base(`${innerColor(innerContent)}`);
+  const STAMP = (innerContent: string, innerColor?: Color) =>
+    innerColor ? innerContent : config.color.base(innerContent);
   return {
     msg: message,
     type: STAMP(logType, typeColor),
